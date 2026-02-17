@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes">
+    <title>QVEEZZ — DIGITAL PRODUCTION 2026</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700;900&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <link rel="stylesheet" href="style.css">
+
+    <!-- FIX: аватарки не раздувают ширину world -->
+    <style>
+        /* аватарки живут поверх, но не влияют на scrollWidth */
+        .floating-avatars-world{
+            position: fixed !important;
+            inset: 0 !important;
+            width: 100vw !important;
+            height: 100vh !important;
+            overflow: hidden !important;
+            z-index: 1 !important;
+            pointer-events: none !important;
+        }
+        /* чтобы внутри fixed-контейнера left/top работали как надо */
+        .floating-avatar{
+            position: absolute;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="matte-grid-overlay"></div>
+
+    <header class="site-header">
+        <div class="header-content">
+            <div class="brand-logo">QVEEZZ</div>
+            <nav class="social-nav">
+                <a href="https://ru.pinterest.com/qveezz/" target="_blank" class="nav-social-link"><i class="fa-brands fa-pinterest-p"></i></a>
+                <a href="https://t.me/qqveezz" target="_blank" class="nav-social-link"><i class="fa-brands fa-telegram"></i></a>
+                <a href="https://www.instagram.com/qveezzdesigner?igsh=d3FiZmlrZWxvdDVu&utm_source=qr" target="_blank" class="nav-social-link"><i class="fa-brands fa-instagram"></i></a>
+                <a href="https://genius.com/artists/Qveezz" target="_blank" class="nav-social-link"><i class="fa-solid fa-music"></i></a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- FIX: аватарки остаются, но теперь fixed и не влияют на ширину -->
+    <div class="floating-avatars-world" id="flying-avatars-world"></div>
+
+    <div class="viewport">
+        <div class="world" id="world">
+
+            <section class="section section-hero narrow-section">
+                <div class="hero-main-text">
+                    <h1>Создаю визуалы, которые помогают<br>музыке звучать громче</h1>
+                    <div class="hero-sub">DESIGNED BY QVEEZZ © 2026 // VISUAL ARTIST</div>
+                </div>
+            </section>
+
+            <section class="section section-agency agency-tight">
+                <div class="agency-content">
+                    <h2 class="agency-title">Стиль &<br>Визуал</h2>
+                    <p class="agency-description">
+                        Разработка обложек для треков и альбомов,<br>
+                        моушн-дизайн, 3D-графика, анимация,<br>
+                        оформление соцсетей артиста.
+                    </p>
+                </div>
+                <div class="agency-logos">
+                    <div class="logo-text">COVER ART</div>
+                    <div class="logo-text">MOTION</div>
+                    <div class="logo-text">CREATIVE</div>
+                </div>
+            </section>
+
+            <section class="section section-gallery gallery-tight">
+                <div class="gallery-title-wrapper">
+                    <span class="g-tag">SELECTEDWORKS</span>
+                    <h2 class="g-title">КАТАЛОГ РАБОТ</h2>
+                </div>
+
+                <div class="gallery-container">
+                    <div class="p-card blue-neon-card">
+                        <div class="p-img" style="background-image: url('jupi.jpg');"></div>
+                        <div class="p-info">
+                            <span class="p-category">single</span>
+                            <h3 class="p-artist">ЮПИ, BOOGSHI</h3>
+                        </div>
+                    </div>
+
+                    <div class="p-card blue-neon-card">
+                        <div class="p-img" style="background-image: url('elox1m.jpg');"></div>
+                        <div class="p-info">
+                            <span class="p-category">single</span>
+                            <h3 class="p-artist">ELOX1M — ****</h3>
+                        </div>
+                    </div>
+
+                    <div class="p-card blue-neon-card">
+                        <div class="p-img" style="background-image: url('kurokov.jpg');"></div>
+                        <div class="p-info">
+                            <span class="p-category">single</span>
+                            <h3 class="p-artist">KUROKOV — ****</h3>
+                        </div>
+                    </div>
+
+                    <div class="p-card blue-neon-card">
+                        <div class="p-img" style="background-image: url('kokaa.jpg');"></div>
+                        <div class="p-info">
+                            <span class="p-category">single</span>
+                            <h3 class="p-artist">KOKAA — КАРИЕ ГЛАЗА</h3>
+                        </div>
+                    </div>
+
+                    <div class="p-card blue-neon-card">
+                        <div class="p-img" style="background-image: url('ahh.jpg');"></div>
+                        <div class="p-info">
+                            <span class="p-category">single</span>
+                            <h3 class="p-artist">AHHNAH — IN WINTER</h3>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="section section-ready-covers gallery-tight">
+                <div class="gallery-title-wrapper">
+                    <span class="g-tag">AVAILABLENOW</span>
+                    <h2 class="g-title">ПРИМЕРЫ ПАКОВ</h2>
+                    <a href="https://t.me/oblozhkiqveezz" target="_blank" class="top-catalog-btn">
+                        ПОЛНЫЙ КАТАЛОГ ГОТОВЫХ ОБЛОЖЕК
+                    </a>
+                </div>
+
+                <div class="gallery-container">
+                    <div class="p-card blue-neon-card" data-src="1.jpg">
+                        <div class="p-img" style="background-image: url('1.jpg');"></div>
+                        <div class="p-info"><span class="p-category">FOR SALE</span><h3 class="p-artist">#1</h3></div>
+                    </div>
+                    <div class="p-card blue-neon-card" data-src="2.jpg">
+                        <div class="p-img" style="background-image: url('2.jpg');"></div>
+                        <div class="p-info"><span class="p-category">FOR SALE</span><h3 class="p-artist">#2</h3></div>
+                    </div>
+                    <div class="p-card blue-neon-card" data-src="3.jpg">
+                        <div class="p-img" style="background-image: url('3.jpg');"></div>
+                        <div class="p-info"><span class="p-category">FOR SALE</span><h3 class="p-artist">#3</h3></div>
+                    </div>
+                    <div class="p-card blue-neon-card" data-src="4.jpg">
+                        <div class="p-img" style="background-image: url('4.jpg');"></div>
+                        <div class="p-info"><span class="p-category">FOR SALE</span><h3 class="p-artist">#4</h3></div>
+                    </div>
+                    <div class="p-card blue-neon-card" data-src="5.jpg">
+                        <div class="p-img" style="background-image: url('5.jpg');"></div>
+                        <div class="p-info"><span class="p-category">FOR SALE</span><h3 class="p-artist">#5</h3></div>
+                    </div>
+                    <div class="p-card blue-neon-card" data-src="6.jpg">
+                        <div class="p-img" style="background-image: url('6.jpg');"></div>
+                        <div class="p-info"><span class="p-category">FOR SALE</span><h3 class="p-artist">#6</h3></div>
+                    </div>
+                    <div class="p-card blue-neon-card" data-src="7.jpg">
+                        <div class="p-img" style="background-image: url('7.jpg');"></div>
+                        <div class="p-info"><span class="p-category">FOR SALE</span><h3 class="p-artist">#7</h3></div>
+                    </div>
+                    <div class="p-card blue-neon-card" data-src="8.jpg">
+                        <div class="p-img" style="background-image: url('8.jpg');"></div>
+                        <div class="p-info"><span class="p-category">FOR SALE</span><h3 class="p-artist">#8</h3></div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="section section-shop">
+                <div class="shop-card-integrated">
+                    <div class="shop-header">
+                        <i class="fa-solid fa-cart-shopping blue-icon"></i>
+                        <span>MARKETPLACE</span>
+                    </div>
+                    <h2>Готовые обложки</h2>
+                    <p>Эксклюзивные концепты, которые можно забрать прямо сейчас. Без очереди, с твоим названием.</p>
+                    <a href="https://t.me/oblozhkiqveezz" target="_blank" class="shop-btn">
+                        ОТКРЫТЬ КАТАЛОГ В TG
+                    </a>
+                </div>
+            </section>
+
+            <section class="section section-contacts">
+                <div class="contact-box">
+                    <span class="c-label">LET'S WORK</span>
+
+                    <a href="https://t.me/qqveezz" class="contact-link-big">
+                        НАПИСАТЬ МНЕ
+                    </a>
+
+                    <div class="contact-footer-info">
+                        <p>TELEGRAM: @qqveezz</p>
+                        <p>EST. 2026  //  EЖК</p>
+                    </div>
+                </div>
+
+                <footer class="bottom-footer">
+                    <div>© QVEEZZ DIGITAL</div>
+                    <div class="footer-links">
+                        <span>PINTEREST</span> / <span>TELEGRAM</span> / <span>INSTAGRAM</span>
+                    </div>
+                </footer>
+            </section>
+
+        </div>
+    </div>
+
+    <div class="lightbox" id="lightbox">
+        <span class="lightbox-close">&times;</span>
+        <div class="lightbox-content">
+            <img id="lightbox-img" src="" alt="">
+            <a href="https://t.me/qqveezz" target="_blank" class="lightbox-buy-btn">
+                ЗАБРАТЬ ЭТОТ АРТ В TELEGRAM
+            </a>
+        </div>
+    </div>
+
+    <script>
+        (function() {
+            "use strict";
+
+            const container = document.getElementById('flying-avatars-world');
+            if (container) {
+                for (let i = 0; i < 600; i++) {
+                    const avatar = document.createElement('div');
+                    avatar.className = 'floating-avatar';
+                    const size = Math.floor(Math.random() * 70 + 40);
+                    avatar.style.width = size + 'px';
+                    avatar.style.height = size + 'px';
+
+                    /* ВАЖНО: оставляем как у тебя, потому что контейнер теперь fixed+overflow hidden */
+                    avatar.style.left = (Math.random() * 1200) + '%';
+                    avatar.style.top = Math.random() * 100 + '%';
+
+                    avatar.style.animationDuration = (Math.random() * 15 + 10) + 's';
+                    avatar.style.animationDelay = (Math.random() * 20) + 's';
+                    avatar.style.opacity = Math.random() * 0.15 + 0.05;
+                    container.appendChild(avatar);
+                }
+            }
+
+            const lightbox = document.getElementById('lightbox');
+            const lightboxImg = document.getElementById('lightbox-img');
+            const closeBtn = document.querySelector('.lightbox-close');
+
+            if (lightbox && lightboxImg && closeBtn) {
+                const readyCards = document.querySelectorAll('.section-ready-covers .p-card');
+                readyCards.forEach(card => {
+                    card.addEventListener('click', function(e) {
+                        e.preventDefault();
+                        const imgSrc = this.dataset.src;
+                        if (imgSrc) {
+                            lightboxImg.src = imgSrc;
+                            lightbox.classList.add('active');
+                        }
+                    });
+                });
+
+                lightbox.addEventListener('click', function(e) {
+                    if (e.target === lightbox || e.target === closeBtn) {
+                        lightbox.classList.remove('active');
+                        lightboxImg.src = '';
+                    }
+                });
+            }
+
+            /* ==========================
+               HORIZONTAL SCROLL — HARD STOP
+               ЧЕТКАЯ ОСТАНОВКА НА ПОСЛЕДНЕЙ СЕКЦИИ
+            ========================== */
+
+            const world = document.getElementById('world');
+            if (!world) return;
+
+            let targetPos = 0;
+            let scrollPos = 0;
+            let maxScroll = 0;
+
+            function recalcMaxScroll() {
+                maxScroll = world.scrollWidth - window.innerWidth;
+                if (maxScroll < 0) maxScroll = 0;
+                if (targetPos > maxScroll) targetPos = maxScroll;
+                if (scrollPos > maxScroll) scrollPos = maxScroll;
+            }
+
+            recalcMaxScroll();
+
+            window.addEventListener('wheel', (e) => {
+                const delta = e.deltaY;
+
+                if ((scrollPos >= maxScroll && delta > 0) ||
+                    (scrollPos <= 0 && delta < 0)) {
+                    return;
+                }
+
+                e.preventDefault();
+
+                targetPos += delta;
+                if (targetPos < 0) targetPos = 0;
+                if (targetPos > maxScroll) targetPos = maxScroll;
+
+            }, { passive: false });
+
+            function update() {
+                scrollPos += (targetPos - scrollPos) * 0.1;
+
+                if (scrollPos < 0) scrollPos = 0;
+                if (scrollPos > maxScroll) scrollPos = maxScroll;
+
+                world.style.transform = `translateX(-${scrollPos}px)`;
+                requestAnimationFrame(update);
+            }
+            update();
+
+            window.addEventListener('resize', recalcMaxScroll);
+            window.addEventListener('load', recalcMaxScroll);
+
+        })();
+    </script>
+</body>
+</html>
